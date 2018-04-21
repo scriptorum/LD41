@@ -209,7 +209,6 @@ namespace Spewnity
             return GetFullPath(o.transform);
         }
 
-
         /// <summary>
         /// Removes an item from the front of a collection and returns the item
         /// </summary>
@@ -298,10 +297,11 @@ namespace Spewnity
         /// <summary>
         /// Joins an array or list of some type into a comma separated string
         /// </summary>
-        public static string Join<T>(this IList<T> iList, string delim = ",")
+        public static string Join<T>(this IList<T> iList, string delim = ",", string ifNull = null)
         {
             if (iList == null || delim == null)
-                throw new System.ArgumentException();
+                if(ifNull == null) throw new System.ArgumentException();
+                else return ifNull;
 
             string ret = "";
             foreach (T t in iList)
@@ -498,7 +498,7 @@ namespace Spewnity
             return bounds;
         }
 
-        public static void SelfAssign<T>(this GameObject go, ref T component) where T:Component
+        public static void SelfAssign<T>(this GameObject go, ref T component) where T : Component
         {
             component = go.GetComponent<T>();
             component.ThrowIfNull();
@@ -573,7 +573,7 @@ namespace Spewnity
             var enumerable = Toolkit.GetObjectField(source, name) as IEnumerable;
             var enm = enumerable.GetEnumerator();
             while (index-- >= 0)
-                if(!enm.MoveNext())
+                if (!enm.MoveNext())
                     return null;
             return enm.Current;
         }
