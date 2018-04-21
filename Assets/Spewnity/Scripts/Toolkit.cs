@@ -297,11 +297,14 @@ namespace Spewnity
         /// <summary>
         /// Joins an array or list of some type into a comma separated string
         /// </summary>
-        public static string Join<T>(this IList<T> iList, string delim = ",", string ifNull = null)
+        public static string Join<T>(this IList<T> iList, string delim = ",", string onNull = null)
         {
             if (iList == null || delim == null)
-                if(ifNull == null) throw new System.ArgumentException();
-                else return ifNull;
+            {
+                if (onNull == null)
+                    throw new System.ArgumentException();
+                return onNull;
+            }
 
             string ret = "";
             foreach (T t in iList)
@@ -367,6 +370,18 @@ namespace Spewnity
         public static GameObject GetChild(this GameObject go, string name)
         {
             return go.transform.GetChild(name).gameObject;
+        }
+
+        /// <summary>
+        ///  Returns a component of type T that is attached to gameObject's child named "name."
+        /// </summary>
+        /// <param name="go">The GameObject that has the child.</param>
+        /// <param name="name">The name of the child</param>
+        /// <throws>ArgumentNullExcerption</throws>
+        /// <returns>The component attached to the child</returns>
+        public static T GetChildComponent<T>(this GameObject go, string name)
+        {
+            return go.GetChild(name).GetComponent<T>();
         }
 
         /// <summary>
@@ -498,7 +513,17 @@ namespace Spewnity
             return bounds;
         }
 
-        public static void SelfAssign<T>(this GameObject go, ref T component) where T : Component
+        /// <summary>
+        /// Assigns a component of the GameObject to a variable. Throws an error if the component doesn't exist.
+        /// </summary>
+        /// <param name="go">The GameObject to operate on</param>
+        /// <param name="component">A reference to a variable of type T</param>
+        /// <example>
+        /// SpriteRenderer sr;
+        /// gameObject.Assign<SpriteRenderer>(ref sr);
+        /// </example>
+
+        public static void Assign<T>(this GameObject go, ref T component) where T : Component
         {
             component = go.GetComponent<T>();
             component.ThrowIfNull();
