@@ -8,7 +8,7 @@ public class DataManager
 {
 	public static int GENRES = 10;
 
-	public string[] genres = new string[] { "Trope", "Action", "Adventure", "Comedy", "Horror", "Romance", "Tragedy", "Weird", "Science", "Mystery", "Suspense", "Genres" };
+	public string[] genres = new string[] { "Action", "Adventure", "Comedy", "Horror", "Romance", "Tragedy", "Weird", "Science", "Mystery", "Suspense" };
 
 	public Idea[] ideas = new Idea[]
 	{

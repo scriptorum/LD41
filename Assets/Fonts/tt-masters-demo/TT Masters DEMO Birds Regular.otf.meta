@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b7c66907f318444388eae6b11ed41abb
+timeCreated: 1524340694
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: TT Masters DEMO Birds Regular
+  fontNames:
+  - TT Masters DEMO Birds Regular
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
