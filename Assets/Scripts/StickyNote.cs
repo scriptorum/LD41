@@ -34,13 +34,13 @@ public class StickyNote : MonoBehaviour
 	{
 		idea = dm.GetRandomIdea();
 		SetText(idea.GetDescription());
+		// TODO Based on difficulty and available symbols, choose to use some or all of them
 		for(int index = 0; index < 3; index++)
 			UpdateSymbol(index, index < idea.genres.Length ? idea.genres[index] : Genre.None);
 	}
 
 	private void UpdateSymbol(int index, Genre g)
 	{
-		Debug.Log("Index:" + index + " Genre:" + g + " Idea:" + idea);
 		if (index >= idea.genres.Length || g == Genre.None)
 			syms[index].Hide();
 		else syms[index].SetGenre(g);
