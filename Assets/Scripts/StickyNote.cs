@@ -120,7 +120,7 @@ public class StickyNote : MonoBehaviour
 		GameObject go = GameObject.Instantiate(dm.stickyNotePrefab);
 		go.transform.parent = dm.levelContainer;
 		stickyDepth -= 0.00001f;
-		go.transform.position = new Vector3(Random.Range(1f, 6f), Random.Range(-4, 5), stickyDepth);
+		go.transform.position = new Vector3(Random.Range(0.5f, 6.5f), Random.Range(-1.5f,4f), stickyDepth);
 		go.transform.Rotate(0, 0, Random.Range(-15, 15));		
 	}
 
