@@ -10,6 +10,7 @@ public class StickyNote : MonoBehaviour
 	[HideInInspector]
 	TextMesh textMesh;
 	private MeshRenderer textRenderer;
+	private SpriteRenderer paperRenderer;
 	private DataManager dm;
 	private Idea idea;
 	private List<GenreSymbol> syms = new List<GenreSymbol>();
@@ -23,6 +24,7 @@ public class StickyNote : MonoBehaviour
 		dm = DataManager.instance;
 		textMesh = gameObject.GetChild("Text").GetComponent<TextMesh>();
 		textRenderer = gameObject.GetChild("Text").GetComponent<MeshRenderer>();
+		paperRenderer = gameObject.GetChild("Paper").GetComponent<SpriteRenderer>();
 
 		foreach (GenreSymbol gs in gameObject.GetComponentsInChildren<GenreSymbol>())
 			syms.Add(gs);
@@ -41,10 +43,15 @@ public class StickyNote : MonoBehaviour
 		// TODO Based on difficulty and available symbols, choose to use some or all of them
 		for (int index = 0; index < 3; index++)
 			UpdateSymbol(index, index < idea.genres.Length ? idea.genres[index] : Genre.None);
+
+		paperRenderer.flipX = Toolkit.CoinFlip();
 	}
 
 	void OnMouseDrag()
 	{
+		if (!draggable)
+			return;
+
 		//keep track of the mouse position
 		Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
 
@@ -57,13 +64,16 @@ public class StickyNote : MonoBehaviour
 
 	void OnMouseDown()
 	{
-        UpdateDepth();
+		if (!draggable)
+			return;
+
+		UpdateDepth();
 
 		//translate the cubes position from the world to Screen Point
 		screenSpace = Camera.main.WorldToScreenPoint(transform.position);
 
-        //calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
-        offset = transform.position - Camera.main.ScreenToWorldPoint(
+		//calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
+		offset = transform.position - Camera.main.ScreenToWorldPoint(
 			new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
 	}
 
@@ -106,12 +116,12 @@ public class StickyNote : MonoBehaviour
 
 	public static void Create()
 	{
-        DataManager dm = DataManager.instance;
-        GameObject go = GameObject.Instantiate(dm.stickyNotePrefab);
+		DataManager dm = DataManager.instance;
+		GameObject go = GameObject.Instantiate(dm.stickyNotePrefab);
 		go.transform.parent = dm.levelContainer;
 		stickyDepth -= 0.00001f;
 		go.transform.position = new Vector3(Random.Range(1f, 6f), Random.Range(-4, 5), stickyDepth);
-		go.transform.Rotate(0, 0, Random.Range(-15, 15));
+		go.transform.Rotate(0, 0, Random.Range(-15, 15));		
 	}
 
 	public float UpdateDepth()

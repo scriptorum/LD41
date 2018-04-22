@@ -16,6 +16,7 @@ using UnityEditorInternal;
 // TODO Should Lerp be clamped for things like Colors?
 // TODO Is it possible to clone a UnityEvent? It might not be necessary but I'd like to be able to clone the TweenEvents object properly.
 // TODO Disabled properties do not show their tooltips
+// TODO Allow SortingGroup as target
 namespace Spewnity
 {
     /// <summary>
