@@ -113,48 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &494785583
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098484079480662, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f8f74fd26702b46a5bffa7bafa574a5d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,17 +234,6 @@ MonoBehaviour:
     symbol: {fileID: 21300016, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
   - genre: 10
     symbol: {fileID: 21300018, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
-  genres:
-  - Action
-  - Adventure
-  - Comedy
-  - Horror
-  - Romance
-  - Tragedy
-  - Weird
-  - Science
-  - Mystery
-  - Suspense
 --- !u!4 &956159293
 Transform:
   m_ObjectHideFlags: 0
@@ -327,6 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d6fa23fc07b49ffb267fd034a05002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stickyNotePrefab: {fileID: 1395432928064874, guid: f8f74fd26702b46a5bffa7bafa574a5d,
+    type: 2}
 --- !u!4 &1552964596
 Transform:
   m_ObjectHideFlags: 0

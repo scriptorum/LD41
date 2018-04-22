@@ -13,8 +13,10 @@ public class StickyNote : MonoBehaviour
 	private DataManager dm;
 	private Idea idea;
 	private List<GenreSymbol> syms = new List<GenreSymbol>();
+	private bool draggable = true;
+    private Vector3 screenSpace, offset;
 
-	void Awake()
+    void Awake()
 	{
 		dm = DataManager.instance;
 		textMesh = gameObject.GetChild("Text").GetComponent<TextMesh>();
@@ -35,8 +37,31 @@ public class StickyNote : MonoBehaviour
 		idea = dm.GetRandomIdea();
 		SetText(idea.GetDescription());
 		// TODO Based on difficulty and available symbols, choose to use some or all of them
-		for(int index = 0; index < 3; index++)
+		for (int index = 0; index < 3; index++)
 			UpdateSymbol(index, index < idea.genres.Length ? idea.genres[index] : Genre.None);
+	}
+
+	void OnMouseDrag()
+	{
+		//keep track of the mouse position
+		Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+
+		//convert the screen mouse position to world point and adjust with offset
+		var curPosition = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
+
+		//update the position of the object in the world
+		transform.position = curPosition;
+	}
+
+	void OnMouseDown()
+	{
+		//translate the cubes position from the world to Screen Point
+		screenSpace = Camera.main.WorldToScreenPoint(transform.position);
+
+		//calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
+		offset = transform.position - Camera.main.ScreenToWorldPoint(
+			new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
+
 	}
 
 	private void UpdateSymbol(int index, Genre g)
