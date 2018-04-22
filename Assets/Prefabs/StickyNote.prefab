@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395432928064874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.59, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4757808216902776}
@@ -292,7 +292,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728803683086776}
-  m_Text: 'Deus ex machina '
+  m_Text: "What does this \nbutton do? "
   m_OffsetZ: 0
   m_CharacterSize: 0.04
   m_LineSpacing: 0.9
@@ -378,11 +378,11 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 0
       startValue:
-        value: {x: 0, y: 40, z: 0, w: 0}
+        value: {x: -2.59, y: 40, z: 0, w: 0}
       endValue:
-        value: {x: 0, y: 0, z: 0, w: 0}
+        value: {x: -2.59, y: 0.61, z: 0, w: 0}
       value:
-        value: {x: 0, y: 0, z: 0, w: 0}
+        value: {x: -2.59, y: 0.61, z: 0, w: 0}
     rotation:
       enabled: 0
       range: 2
@@ -533,6 +533,1071 @@ MonoBehaviour:
     delayRemaining: 0
     timeRemaining: 0
     initialized: 1
+  - name: fade-paper
+    duration: 0.25
+    target: {fileID: 1114435645086438}
+    position:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 1
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 0.9
+            value: 1
+            inSlope: 0.036163453
+            outSlope: 0
+            tangentMode: 65
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    rotation:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 1
+        pingPong: 0
+        reverse: 0
+        randomize: 1
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: -0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    scale:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 25, y: 25, z: 50, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 25, y: 25, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 0}
+    color:
+      enabled: 1
+      range: 0
+      source:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 1}
+      frozenAxes:
+        x: 1
+        y: 1
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 255}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 255}
+    value:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      type: 0
+    options:
+      loops: 1
+      loopDelay: 0
+      autoStart: 1
+      events:
+        Start:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Change:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        End:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Loop:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+    loopsRemaining: 0
+    delayRemaining: 0
+    timeRemaining: 0
+    initialized: 1
+  - name: fade-sym1
+    duration: 0.25
+    target: {fileID: 1989747445804608}
+    position:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 1
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 0.9
+            value: 1
+            inSlope: 0.036163453
+            outSlope: 0
+            tangentMode: 65
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    rotation:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 1
+        pingPong: 0
+        reverse: 0
+        randomize: 1
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: -0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    scale:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 25, y: 25, z: 50, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 25, y: 25, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 0}
+    color:
+      enabled: 1
+      range: 0
+      source:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 1}
+      frozenAxes:
+        x: 1
+        y: 1
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 255}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 255}
+    value:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      type: 0
+    options:
+      loops: 1
+      loopDelay: 0
+      autoStart: 1
+      events:
+        Start:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Change:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        End:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Loop:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+    loopsRemaining: 0
+    delayRemaining: 0
+    timeRemaining: 0
+    initialized: 1
+  - name: fade-sym2
+    duration: 0.25
+    target: {fileID: 1500321558512058}
+    position:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 1
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 0.9
+            value: 1
+            inSlope: 0.036163453
+            outSlope: 0
+            tangentMode: 65
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    rotation:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 1
+        pingPong: 0
+        reverse: 0
+        randomize: 1
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: -0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    scale:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 25, y: 25, z: 50, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 25, y: 25, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 0}
+    color:
+      enabled: 1
+      range: 0
+      source:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 1}
+      frozenAxes:
+        x: 1
+        y: 1
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 255}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 255}
+    value:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      type: 0
+    options:
+      loops: 1
+      loopDelay: 0
+      autoStart: 1
+      events:
+        Start:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Change:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        End:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Loop:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+    loopsRemaining: 0
+    delayRemaining: 0
+    timeRemaining: 0
+    initialized: 1
+  - name: fade-sym3
+    duration: 0.25
+    target: {fileID: 1535925893863442}
+    position:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 1
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 0.9
+            value: 1
+            inSlope: 0.036163453
+            outSlope: 0
+            tangentMode: 65
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    rotation:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 1
+        pingPong: 0
+        reverse: 0
+        randomize: 1
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: -0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    scale:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 25, y: 25, z: 50, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 25, y: 25, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 0}
+    color:
+      enabled: 1
+      range: 0
+      source:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 1}
+      frozenAxes:
+        x: 1
+        y: 1
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 255}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 255}
+    value:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      type: 0
+    options:
+      loops: 1
+      loopDelay: 0
+      autoStart: 1
+      events:
+        Start:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Change:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        End:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Loop:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+    loopsRemaining: 0
+    delayRemaining: 0
+    timeRemaining: 0
+    initialized: 1
+  - name: fade-text
+    duration: 0.25
+    target: {fileID: 1728803683086776}
+    position:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 1
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 0.9
+            value: 1
+            inSlope: 0.036163453
+            outSlope: 0
+            tangentMode: 65
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 40, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    rotation:
+      enabled: 0
+      range: 2
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 1
+        pingPong: 0
+        reverse: 0
+        randomize: 1
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: -0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+    scale:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 25, y: 25, z: 50, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 25, y: 25, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 0}
+    color:
+      enabled: 1
+      range: 0
+      source:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      dest:
+        value: {x: 1, y: 1, z: 1, w: 1}
+      frozenAxes:
+        x: 1
+        y: 1
+        z: 1
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 2
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 1, y: 1, z: 1, w: 0}
+      endValue:
+        value: {x: 1, y: 1, z: 1, w: 255}
+      value:
+        value: {x: 1, y: 1, z: 1, w: 255}
+    value:
+      enabled: 0
+      range: 0
+      source:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      dest:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      frozenAxes:
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+      options:
+        local: 0
+        relativeVals: 0
+        pingPong: 0
+        reverse: 0
+        randomize: 0
+        easing:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 0
+          m_PostInfinity: 0
+          m_RotationOrder: 0
+      startValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      endValue:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      value:
+        value: {x: 0, y: 0, z: 0, w: 0}
+      type: 0
+    options:
+      loops: 1
+      loopDelay: 0
+      autoStart: 1
+      events:
+        Start:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Change:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        End:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        Loop:
+          m_PersistentCalls:
+            m_Calls: []
+          m_TypeName: Spewnity.TweenEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+    loopsRemaining: 0
+    delayRemaining: 0
+    timeRemaining: 0
+    initialized: 1
   compoundTweens: []
 --- !u!114 &114571080132806326
 MonoBehaviour:
@@ -545,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d03132b2b9f4f62946f0948ed2f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedGenre: 10
+  selectedGenre: 0
 --- !u!114 &114690294162002634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -557,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d03132b2b9f4f62946f0948ed2f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedGenre: 3
+  selectedGenre: 2
 --- !u!114 &114934922398686920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d03132b2b9f4f62946f0948ed2f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedGenre: 5
+  selectedGenre: 8
 --- !u!210 &210842398779574744
 SortingGroup:
   m_ObjectHideFlags: 1
@@ -615,8 +1680,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -50
   m_Sprite: {fileID: 21300000, guid: b383f5ac867e94154b803755aaa14881, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 255}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.56, y: 2.56}
@@ -658,7 +1723,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
+  m_Sprite: {fileID: 21300014, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -702,7 +1767,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300018, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -710,7 +1775,7 @@ SpriteRenderer:
   m_Size: {x: 0.4, y: 0.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212831753407127802
 SpriteRenderer:
@@ -746,7 +1811,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
+  m_Sprite: {fileID: 21300002, guid: da12ee699847a4535adfae85af2af5fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: bf3a0ef1fb1284f92991ca4881e85d99
+timeCreated: 1524429165
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Life Savers
+  fontNames:
+  - Life Savers
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4b4a5e7984b3544ac99d7e827d4089a8, type: 3}
+  - {fileID: 12800000, guid: a9a6cd7bb0c0944e4a407d1f97d768ac, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

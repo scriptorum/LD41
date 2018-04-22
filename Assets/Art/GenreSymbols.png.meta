@@ -14,12 +14,12 @@ TextureImporter:
     21300014: Science
     21300016: Mystery
     21300018: Suspense
-    21300020: GenreSymbols_10
-    21300022: GenreSymbols_11
-    21300024: GenreSymbols_12
-    21300026: GenreSymbols_13
-    21300028: GenreSymbols_14
-    21300030: GenreSymbols_15
+    21300020: Highlight
+    21300022: Okay
+    21300024: Or
+    21300026: And
+    21300028: Blank1
+    21300030: Blank2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -237,7 +237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GenreSymbols_10
+      name: Highlight
       rect:
         serializedVersion: 2
         x: 128
@@ -251,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GenreSymbols_11
+      name: Okay
       rect:
         serializedVersion: 2
         x: 192
@@ -265,7 +265,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GenreSymbols_12
+      name: Or
       rect:
         serializedVersion: 2
         x: 0
@@ -279,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GenreSymbols_13
+      name: And
       rect:
         serializedVersion: 2
         x: 64
@@ -293,7 +293,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GenreSymbols_14
+      name: Blank1
       rect:
         serializedVersion: 2
         x: 128
@@ -307,7 +307,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GenreSymbols_15
+      name: Blank2
       rect:
         serializedVersion: 2
         x: 192

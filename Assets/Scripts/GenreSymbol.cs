@@ -11,12 +11,18 @@ public class GenreSymbol : MonoBehaviour
 	private DataManager dm;
 
 	void Awake()
-	{
-		gameObject.Assign(ref sr);
-		dm = DataManager.instance;
-	}
+    {
+        Init();
+    }
 
-	public void Hide()
+    private void Init()
+    {
+        gameObject.Assign(ref sr);
+        dm = DataManager.instance;
+        SetGenre(selectedGenre);
+    }
+
+    public void Hide()
 	{
 		selectedGenre = Genre.None;
 		sr.sprite = null;
@@ -32,5 +38,10 @@ public class GenreSymbol : MonoBehaviour
 
 		selectedGenre = g;
 		sr.sprite = dm.genreSprites.Find((GenreSprite a) => { return a.genre == selectedGenre; }).symbol;
+	}
+
+	void OnValidate()
+	{
+        Init();
 	}
 }

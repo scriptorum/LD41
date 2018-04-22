@@ -114,7 +114,8 @@ public class Idea
 	}
 }
 
-public enum Genre { None, Action, Adventure, Comedy, Horror, Romance, Tragedy, Weird, Science, Mystery, Suspense };
+public enum Genre { None, Action, Adventure, Comedy, Horror, Romance, Tragedy, 	
+	Weird, Science, Mystery, Suspense, Highlight, Okay, Or, And };
 
 [System.Serializable]
 public struct GenreSprite
