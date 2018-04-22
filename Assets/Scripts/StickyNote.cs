@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Spewnity;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class StickyNote : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class StickyNote : MonoBehaviour
 	private DataManager dm;
 	private Idea idea;
 	private List<GenreSymbol> syms = new List<GenreSymbol>();
-	private bool draggable = true;
+	private TweenManager tm;
 	private Vector3 screenSpace, offset;
 	public GameObject stickyNotePrefab;
 	private static float stickyDepth = 0f;
@@ -25,6 +27,7 @@ public class StickyNote : MonoBehaviour
 		textMesh = gameObject.GetChild("Text").GetComponent<TextMesh>();
 		textRenderer = gameObject.GetChild("Text").GetComponent<MeshRenderer>();
 		paperRenderer = gameObject.GetChild("Paper").GetComponent<SpriteRenderer>();
+		tm = gameObject.GetChild("Tweener").GetComponent<TweenManager>();
 
 		foreach (GenreSymbol gs in gameObject.GetComponentsInChildren<GenreSymbol>())
 			syms.Add(gs);
@@ -49,9 +52,6 @@ public class StickyNote : MonoBehaviour
 
 	void OnMouseDrag()
 	{
-		if (!draggable)
-			return;
-
 		//keep track of the mouse position
 		Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
 
@@ -63,21 +63,36 @@ public class StickyNote : MonoBehaviour
 	}
 
 	void OnMouseDown()
+    {
+        PickupSticky();
+
+        //translate the cubes position from the world to Screen Point
+        screenSpace = Camera.main.WorldToScreenPoint(transform.position);
+
+        //calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
+        offset = transform.position - Camera.main.ScreenToWorldPoint(
+            new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
+    }
+	
+	void OnMouseUp()
 	{
-		if (!draggable)
-			return;
-
-		UpdateDepth();
-
-		//translate the cubes position from the world to Screen Point
-		screenSpace = Camera.main.WorldToScreenPoint(transform.position);
-
-		//calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
-		offset = transform.position - Camera.main.ScreenToWorldPoint(
-			new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
+		DropSticky();
+		
 	}
 
-	private void UpdateSymbol(int index, Genre g)
+    private void DropSticky()
+    {
+        UpdateDepth();
+		tm.PlayCompound("drop");
+    }
+
+    private void PickupSticky()
+    {
+        UpdateDepth();
+		tm.PlayCompound("pickup");
+    }
+
+    private void UpdateSymbol(int index, Genre g)
 	{
 		if (index >= idea.genres.Length || g == Genre.None)
 			syms[index].Hide();
