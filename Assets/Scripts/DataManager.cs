@@ -9,6 +9,8 @@ public class DataManager : MonoBehaviour
 {
 	public static int GENRES = 10;
 
+	public GameObject stickyNotePrefab;
+	public Transform levelContainer;
 	public List<GenreSprite> genreSprites = new List<GenreSprite>();
 	public Idea[] ideas = new Idea[]
 	{
@@ -74,6 +76,7 @@ public class DataManager : MonoBehaviour
 			return dm;
 		}
 	}
+	
 }
 
 public class Idea
