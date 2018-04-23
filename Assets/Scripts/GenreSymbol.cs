@@ -6,26 +6,24 @@ using UnityEngine;
 
 public class GenreSymbol : MonoBehaviour
 {
-	public Genre selectedGenre = Genre.None;
+	public Genre genre = Genre.None;
 	private SpriteRenderer sr;
 	private DataManager dm;
+	private TweenManager tm;
 
 	void Awake()
     {
-        Init();
-    }
-
-    private void Init()
-    {
-        gameObject.Assign(ref sr);
         dm = DataManager.instance;
-        SetGenre(selectedGenre);
+        gameObject.Assign(ref sr);
+		gameObject.Assign(ref tm);
+        SetGenre(genre);
     }
 
     public void Hide()
 	{
-		selectedGenre = Genre.None;
+		genre = Genre.None;
 		sr.sprite = null;
+		tm.StopAll();
 	}
 
 	public void SetGenre(Genre g)
@@ -36,12 +34,14 @@ public class GenreSymbol : MonoBehaviour
 			return;
 		}
 
-		selectedGenre = g;
-		sr.sprite = dm.genreSprites.Find((GenreSprite a) => { return a.genre == selectedGenre; }).symbol;
+		genre = g;
+		sr.sprite = dm.genreSprites.Find((GenreSprite a) => { return a.genre == genre; }).symbol;
 	}
 
-	void OnValidate()
+	public void Blink(bool enabled = true)
 	{
-        Init();
+		if(enabled)
+			tm.Play("blink");
+		else tm.StopAll();
 	}
 }

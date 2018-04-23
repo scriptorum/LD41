@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class StickyNote : MonoBehaviour
 {
 	public float rowLimit = 2f;
+	public GameObject stickyNotePrefab;
 
 	[HideInInspector]
 	TextMesh textMesh;
@@ -18,7 +19,8 @@ public class StickyNote : MonoBehaviour
 	private List<GenreSymbol> syms = new List<GenreSymbol>();
 	private TweenManager tm;
 	private Vector3 screenSpace, offset;
-	public GameObject stickyNotePrefab;
+	private GameObject level;
+
 	private static float stickyDepth = 0f;
 
 	void Awake()
@@ -28,6 +30,7 @@ public class StickyNote : MonoBehaviour
 		textRenderer = gameObject.GetChild("Text").GetComponent<MeshRenderer>();
 		paperRenderer = gameObject.GetChild("Paper").GetComponent<SpriteRenderer>();
 		tm = gameObject.GetChild("Tweener").GetComponent<TweenManager>();
+		level = gameObject.GetChild("/Level");
 
 		foreach (GenreSymbol gs in gameObject.GetComponentsInChildren<GenreSymbol>())
 			syms.Add(gs);
@@ -63,36 +66,45 @@ public class StickyNote : MonoBehaviour
 	}
 
 	void OnMouseDown()
-    {
-        PickupSticky();
+	{
+		PickupSticky();
 
-        //translate the cubes position from the world to Screen Point
-        screenSpace = Camera.main.WorldToScreenPoint(transform.position);
+		//translate the cubes position from the world to Screen Point
+		screenSpace = Camera.main.WorldToScreenPoint(transform.position);
 
-        //calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
-        offset = transform.position - Camera.main.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
-    }
-	
+		//calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
+		offset = transform.position - Camera.main.ScreenToWorldPoint(
+			new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
+	}
+
 	void OnMouseUp()
 	{
 		DropSticky();
-		
 	}
 
-    private void DropSticky()
-    {
-        UpdateDepth();
+	private void DropSticky()
+	{
+		UpdateDepth();
 		tm.PlayCompound("drop");
-    }
+		level.BroadcastMessage("OnStickyDrop", this);
+	}
 
-    private void PickupSticky()
-    {
-        UpdateDepth();
+	private void PickupSticky()
+	{
+		UpdateDepth();
 		tm.PlayCompound("pickup");
-    }
+		level.BroadcastMessage("OnStickyPickup", this);
+	}
 
-    private void UpdateSymbol(int index, Genre g)
+	public bool HasSymbol(Genre genre)
+	{
+		foreach (Genre ideaGenre in idea.genres)
+			if (ideaGenre == genre)
+				return true;
+		return false;
+	}
+
+	private void UpdateSymbol(int index, Genre g)
 	{
 		if (index >= idea.genres.Length || g == Genre.None)
 			syms[index].Hide();
@@ -135,8 +147,8 @@ public class StickyNote : MonoBehaviour
 		GameObject go = GameObject.Instantiate(dm.stickyNotePrefab);
 		go.transform.parent = dm.levelContainer;
 		stickyDepth -= 0.00001f;
-		go.transform.position = new Vector3(Random.Range(0.5f, 6.5f), Random.Range(-1.5f,4f), stickyDepth);
-		go.transform.Rotate(0, 0, Random.Range(-15, 15));		
+		go.transform.position = new Vector3(Random.Range(0.5f, 6.5f), Random.Range(-1.5f, 4f), stickyDepth);
+		go.transform.Rotate(0, 0, Random.Range(-15, 15));
 	}
 
 	public float UpdateDepth()
